@@ -8,6 +8,8 @@ RUN apt-get -qq install sudo git-core gnupg flex bison build-essential zip curl 
 # RUN touch /etc/mtab # Fix resize2fs mtab failure which expects /etc/mtab to be present
 
 #RUN curl https://storage.googleapis.com/git-repo-downloads/repo > ${REPO_BIN}/repo && chmod +x ${REPO_BIN}/repo
+# 清理
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # 添加用户
 RUN useradd --create-home --no-log-init --shell /bin/bash developer \
