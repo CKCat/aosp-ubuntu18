@@ -33,4 +33,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ckcat/aosp-ubuntu18
+            ckcat/aosp18
